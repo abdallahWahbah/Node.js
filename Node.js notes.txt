@@ -1,0 +1,32 @@
+**********************************************************
+// section 2: intro to nodejs and npm
+**********************************************************
+
+// we use nodejs to run code outside the browser (server) using v8 engine made by google
+
+///// create a new application
+# npm init >>>> press enter multiple time for default installation
+# npm install nodemon --global >>>> (only one time on your pc) automatically restart the server every time we do a change
+# nodemon index.js
+or (instead of the last line)
+open package.json, script
+"start": "nodemon index.js"
+# npm run start  >>> or npm start
+
+slugify >>> to replace spaces with "-" // ex: Fresh Avocados >>> fresh-avocados
+
+
+**********************************************************
+// section 4: How Node.js works: a look behind the scenes
+**********************************************************
+
+// Node.js is a js run time based on v8
+// v8 converts js to machine code that the computer can understand 
+// libuv: open source library with a strong focus on async IO (input/output), gives node access to operating system, File system, networking and more
+// libuv implements event loop and thread pool
+// event loop is responsible for handling easy tasks like callbacks and network IO
+// threed pool is for heavy work like file access or compression
+// if you run node.js application, it will run on a single thread no matter if we have 10 users or a million accessing the application at the same time which block execution
+// event loop makes async operation possible in node.js moving the heavy tasks to the thread pool
+
+
