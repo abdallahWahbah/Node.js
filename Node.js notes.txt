@@ -30,3 +30,43 @@ slugify >>> to replace spaces with "-" // ex: Fresh Avocados >>> fresh-avocados
 // event loop makes async operation possible in node.js moving the heavy tasks to the thread pool
 
 
+**********************************************************
+// section 6: Express
+**********************************************************
+
+# npm init
+// choose default values (press enter too many times)
+# npm i express@4 >>> as discussed in the course 
+// create app.js file
+# nodemon app.js
+
+// IMPORTANT >>> after we created server.js and run the server inside of it, we run # nodmenom server.js or we make a script in package.json 
+"start": "nodemon server.js"
+# npm start
+
+
+// environment variables
+# npm i dotenv
+- create config.env file and declare variable in it like NAME=abdallah AGE=12
+// to use it
+const port = process.env.PORT || 3000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
