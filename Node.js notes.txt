@@ -49,13 +49,32 @@ slugify >>> to replace spaces with "-" // ex: Fresh Avocados >>> fresh-avocados
 # npm i dotenv
 - create config.env file and declare variable in it like NAME=abdallah AGE=12
 // to use it
+const dotenv = require("dotenv"); (in server.js)
+dotenv.config({ path: "./config.env" }); // if we wanted to use environment variables, we need to setup this line before require app(next line)
 const port = process.env.PORT || 3000;
 
+// in any other place  
+if(process.env.NODE_ENV === "development"){}
 
 
+// to use compass app, make sure to run the mongo server 
 
 
+**********************************************************
+// section 8: Using Mongodb with Mongoose
+**********************************************************
 
+// mongoose
+// mongodb driver: software that allows our node code to access and interact with mongodb database (most popular is Mongoose)
+# npm i mongoose 
+
+// to connect compass to local database
+- open config.env >>> DATABASE_LOCAL=mongodb://localhost:27017/natours
+- open server.js 
+
+const mongoose = require("mongoose");
+mongoose.connect(process.env.DATABASE_LOCAL) // mongoose.connect('mongodb://127.0.0.1:27017/myapp'); // myapp is the db name
+.then(()=> console.log("DB connection successful!"))
 
 
 
